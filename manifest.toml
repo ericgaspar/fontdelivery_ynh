@@ -12,12 +12,12 @@ version = "1.0~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
-website = "https://example.com"
-demo = "https://demo.example.com"
+license = "MIT"
+website = "https://font.delivery/"
+demo = "https://font.delivery/"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
-code = "https://some.forge.com/example/example"
+code = "https://github.com/sfhorg/font.delivery"
 
 [integration]
 yunohost = ">= 11.2.30"
@@ -46,8 +46,9 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    rename = "fontdl"
+    url = "https://github.com/sfhorg/font.delivery/releases/download/fontdl-v0.1.0/fontdl-v0.1.0-linux-amd64"
+    sha256 = "40b5304ad0ccfb50c78e178ce4677db36585d53c0e55fec831ece3d888a99092"
 
     # autoupdate.strategy = "latest_github_tag"
 
