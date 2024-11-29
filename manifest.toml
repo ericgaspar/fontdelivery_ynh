@@ -7,7 +7,7 @@ name = "font.delivery"
 description.en = ""
 description.fr = ""
 
-version = "1.0~ynh1"
+version = "0.1.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -16,7 +16,6 @@ license = "MIT"
 website = "https://font.delivery/"
 demo = "https://font.delivery/"
 admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
 code = "https://github.com/sfhorg/font.delivery"
 
 [integration]
@@ -26,7 +25,6 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -47,6 +45,8 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     rename = "fontdl"
+    in_subdir = false
+    extract = false
     url = "https://github.com/sfhorg/font.delivery/releases/download/fontdl-v0.1.0/fontdl-v0.1.0-linux-amd64"
     sha256 = "40b5304ad0ccfb50c78e178ce4677db36585d53c0e55fec831ece3d888a99092"
 
@@ -55,8 +55,6 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
