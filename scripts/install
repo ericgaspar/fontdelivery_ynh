@@ -10,8 +10,6 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod +x "$install_dir/fontdl"
-
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
@@ -22,6 +20,15 @@ ynh_config_add_nginx
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+
+#=================================================
+# INSTALL
+#=================================================
+ynh_script_progression "Installing the app..."
+
+pushd "$install_dir/web"
+ 	ynh_hide_warnings ynh_exec_as_app npm install
+popd
 
 #=================================================
 # START SYSTEMD SERVICE

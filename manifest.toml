@@ -47,8 +47,8 @@ ram.runtime = "50M"
     rename = "fontdl"
     in_subdir = false
     extract = false
-    url = "https://github.com/sfhorg/font.delivery/releases/download/fontdl-v0.1.0/fontdl-v0.1.0-linux-amd64"
-    sha256 = "40b5304ad0ccfb50c78e178ce4677db36585d53c0e55fec831ece3d888a99092"
+    url = "https://github.com/sfhorg/font.delivery/archive/refs/tags/fontdl-v0.1.0.tar.gz"
+    sha256 = "a59b16124cc901ef43e89b6dfc89abb55e5800016656448a54d6814162334158"
 
     # autoupdate.strategy = "latest_github_tag"
 
